@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.biovoxxel</groupId>
+  <artifactId>BIAQualityTools</artifactId>
+  <version>0.0.1</version>
+  <name>BioVoxxel Figure Tools</name>
+  <description>TBD</description>
+  <inceptionYear>2023</inceptionYear>
+	
+	<url>tbd</url>
+	<organization>
+		<name>BioVoxxel</name>
+	 	<url>https://www.biovoxxel.de</url>
+	 </organization>
+	 
+	<parent>
+		<relativePath />
+		<artifactId>pom-scijava</artifactId>
+		<version>37.0.0</version>
+		<groupId>org.scijava</groupId>
+	</parent>
+	
+	
+	 <developers>
+		<developer>
+			<id>biovoxxel</id>
+			<name>Jan Brocher</name>
+			<email>jan.brocher@biovoxxel.de</email>
+			<organization>BioVoxxel</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-6</timezone>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>none</name>
+		</contributor>
+	</contributors>
+	
+	<licenses>
+		<license>
+			<name>3-Clause BSD License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<properties>
+		<package-name>de.biovoxxel.bv3dbox</package-name>
+		<license.licenseName>bsd_3</license.licenseName>
+		<license.copyrightOwners>Jan Brocher, BioVoxxel</license.copyrightOwners>
+		<!--<scijava.app.directory>/home/rhaase/programs/fiji/Fiji.app/</scijava.app.directory>-->
+	</properties>
+	
+		<mailingLists>
+		<mailingList>
+			<name>ImageSc Forum</name>
+			<archive>http://forum.image.sc/</archive>
+		</mailingList>
+	</mailingLists>
+	 
+	<scm>
+		<url>None</url>
+	</scm>
+	
+	
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/biovoxxel/svgexporter/issues</url>
+	</issueManagement>
+	
+	 
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+		<repository>	
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+	 
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.scijava/scijava-common -->
+		<dependency>
+		    <groupId>org.scijava</groupId>
+		    <artifactId>scijava-common</artifactId>
+		    <version>2.89.0</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlgraphics/batik-dom -->
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlgraphics/batik-anim -->
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlgraphics/batik-svggen -->
+
+		
+	</dependencies>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources/legacy</directory>			
+					<includes>
+						<include>plugins.config</include>
+					</includes>
+			</resource>
+		</resources>
+	  <plugins>
+	    <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-jar-plugin</artifactId>
+	     <configuration>
+	        <outputDirectory>D:/BioVoxxel/Fiji/Fiji.app - BVTB 3.0/plugins</outputDirectory>
+	      </configuration>
+	    </plugin>
+	  </plugins>
+	</build>
+	 
+  
+	
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+</project>
